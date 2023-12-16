@@ -16,7 +16,7 @@ export function Favourites(): JSX.Element {
   return (
     <div className="flex flex-col items-center mx-auto px-5 py-8 w-screen h-full">
       <h1 className="mb-8 text-2xl font-bold">Favourite repos</h1>
-      <ul className="flex flex-col gap-8">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-8 max-w-full">
         {groupedFavourites.map(group => (
           <FavouriteGroup {...group} key={group.owner.name} />
         ))}
